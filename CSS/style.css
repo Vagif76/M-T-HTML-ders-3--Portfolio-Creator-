@@ -1,0 +1,117 @@
+
+/* Müştərinin tələbinə uyğun fontları Google fontsdan kopyalayıb CSS-ə link olaraq əlavə edə bilərik */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  body {
+       font-family: 'Roboto', sans-serif;
+        /* Ümumi səhifəyə font təyin etdik */
+  }
+
+/* Sayt kodlayarkən ilk növbədə "Mobile First" yanaşmasını əsas tutmalıyıq. */
+
+header {
+  display: flex; 
+  /* display: flex; obyektləri yan-yana gətirir */
+
+  justify-content: space-between;
+  /* Bu xassə və dəyəri (justify-content: space-between;) məzmunu 1-ci obyekt ən sola, axırıncı obyekt ən sağa (ikisinin arasında) çəkilməklə 
+  ortada yaranmış boşluğa avtomatik məsafə təyin edir. */
+
+  align-items: center;
+  /* Hər hansı blok elementin içində vertikal üzrə mərkəzdə qərarlaşır. */
+
+  background-color: aquamarine;
+
+  padding: 20px 10px;
+  /* daxili boşluq - (20px yuxarı-aşağı paralellər, 10px sol-sağ paralellər */
+}
+
+header nav a {
+  color: #000;
+  margin-right: 15px;
+/* Sagdan xarici boşluq */
+}
+
+header nav {
+  display: none;
+/* "nav"-da yazılanlar görsənməsin */
+}
+
+/* Navbarı 768-dən yuxarı ölçülərdə görüntüləmək, bar menyunun (buterbrod) isə görsənməməsi üçün */
+@media(min-width: 768px) {
+  header nav {
+    display: block;
+    /* Yəni görsənsin */
+  }
+
+  header .fa-bars {
+    display: none;
+  }
+  
+}
+
+
+
+
+
+/* Saytımızın ümumi görünüşünü müxtəlif cihazlarda yaxşı görsənməsi üçün responsivliyinin təyin edilməsi: */
+/* Maksimum ölçüsü 575px olan ekranlarda ümumi ekranın 100%-ni tutsun. */
+@media(max-width: 575px) {
+  .container1 {
+    max-width: 100%;
+  }
+}
+
+/* Mnimum ölçüsü 576px olan ekranlarda  */
+@media(min-width: 576px) {
+  .container1 {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+/* Minimum ölçüsü 768px olan ekranlarda */
+@media(min-width: 768px) {
+  .container1 {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Minimum ölçüsü 992px olan ekranlarda */
+@media(min-width: 992px) {
+  .container1 {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* Minimum ölçüsü 1200px olan ekranlarda */
+@media(min-width: 1200px) {
+  .container1 {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+/* Minimum ölçüsü 1400px olan ekranlarda */
+@media(min-width: 1400px) {
+  .container1 {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+/* Müxtəlif cihzlarda ekran ölçülərinə görə responsivliyin təyini:
+1. Ekran ölçüləri: 576-dan kiçik olanda - ekstra kiçik cihazlar col-12
+2. Ekran ölçüləri: 576-768 kiçik cihazlar 
+3. Ekran ölçüləri: 768-991 (planşet) col-md
+4. Ekran ölçüləri: 991-1200  noutbuklar
+5. Ekran ölçüləri: 1200-1400 (PC)
+6. Ekran ölçüləri: 1400-dən yuxarı (Smart TV) */
